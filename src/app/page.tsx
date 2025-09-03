@@ -353,43 +353,9 @@ export default function Page() {
     };
   }, [animationComplete]);
 
-  // Scroll-triggered animations
+  // Background parallax animation
   useEffect(() => {
     if (!animationComplete) return;
-
-    // Menu section animation
-    gsap.fromTo(menuSectionRef.current,
-      { opacity: 0, y: 100 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: menuSectionRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse"
-        }
-      }
-    );
-
-    // Gallery section animation
-    gsap.fromTo(gallerySectionRef.current,
-      { opacity: 0, y: 100 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1.5,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: gallerySectionRef.current,
-          start: "top 80%",
-          end: "bottom 20%",
-          toggleActions: "play none none reverse"
-        }
-      }
-    );
 
     // Parallax effect for background
     gsap.to(bgImageRef.current, {
