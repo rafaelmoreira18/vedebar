@@ -50,7 +50,7 @@ export default function HeroSection({
         {/* Logo on the Left - INCREASED SIZE */}
         <div className="flex-shrink-0 mr-12">
           <img 
-            src="/icon.png" 
+            src="/VedeLogoWhite.png" 
             alt="Vedê Bar Logo" 
             className="w-80 h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] object-contain"
             style={{
@@ -78,7 +78,7 @@ export default function HeroSection({
         {/* Logo at Top Center - FIXED POSITION */}
         <div>
           <img 
-            src="/icon.png" 
+            src="/VedeLogoWhite.png" 
             alt="Vedê Bar Logo" 
             className="w-32 h-32 sm:w-40 sm:h-40 object-contain fixed top-4 left-1/2 transform -translate-x-1/2 drop-shadow-[0_8px_32px_rgba(0,0,0,0.8)] z-50"
             style={{

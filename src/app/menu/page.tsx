@@ -22,7 +22,7 @@ export default function MenuPage() {
     <div className="min-h-screen bg-black">
       <header className="w-full flex justify-between items-center py-6 px-8">
         <Image
-          src="/images/vedebar_Logo.png"
+          src="/VedeLogoWhite.png"
           alt="Vedebar Logo"
           width={120}
           height={120}
