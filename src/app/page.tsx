@@ -34,6 +34,8 @@ export default function Page() {
   const imageScrollRef = useRef<HTMLDivElement>(null);
   const drinkModalRef = useRef<HTMLDivElement>(null);
   const drinkModalContentRef = useRef<HTMLDivElement>(null);
+  const menuSectionRef = useRef<HTMLDivElement>(null);
+  const gallerySectionRef = useRef<HTMLDivElement>(null);
 
   const [animationComplete, setAnimationComplete] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -264,7 +266,6 @@ export default function Page() {
       }
     }
   }, [animationVisible, videoLoaded, reservationsVideoLoaded]);
->>>>>>> remotes/vedebar/main
 
   // Start videos when both animation is complete and videos are loaded
   useEffect(() => {
@@ -406,10 +407,6 @@ export default function Page() {
 
   const handleDrinkClick = (drink: typeof drinks[0]) => {
     setSelectedDrink(drink);
-  };
-
-  const closeDrinkModal = () => {
-    setSelectedDrink(null);
   };
 
   return (
