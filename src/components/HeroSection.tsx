@@ -73,21 +73,16 @@ export default function HeroSection({
         </div>
       </div>
 
-      {/* Mobile Layout: Logo Top Center, Text Below - LOGO MOVED TO TOP */}
+      {/* Mobile Layout: Logo Top Center, Text Below */}
       <div className="md:hidden container mx-auto px-6 pt-24 pb-20 text-center relative z-10 flex flex-col items-center justify-start h-full">
-        {/* Logo at Top Center - FIXED POSITION */}
-        <div>
+        {/* Logo at Top Center */}
+        <div className="mb-8">
           <img 
             src="/VedeLogoWhite.png" 
             alt="Vedê Bar Logo" 
-            className="w-32 h-32 sm:w-40 sm:h-40 object-contain fixed top-4 left-1/2 transform -translate-x-1/2 drop-shadow-[0_8px_32px_rgba(0,0,0,0.8)] z-50"
+            className="w-32 h-32 sm:w-40 sm:h-40 object-contain"
             style={{
-              filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.8))",
-              position: "fixed",
-              top: "1rem",
-              left: "50%",
-              transform: "translateX(-50%)",
-              zIndex: 9999
+              filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.8))"
             }}
           />
         </div>
