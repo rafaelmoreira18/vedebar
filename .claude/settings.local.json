@@ -19,7 +19,10 @@
       "WebSearch",
       "Bash(node server.js)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(yarn install)",
+      "Bash(yarn build)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": [],
