@@ -22,14 +22,14 @@ export default function HeroSection({
         loop
         muted
         playsInline
-        style={{ 
+        style={{
           display: animationComplete ? "block" : "none",
           filter: "brightness(0.4)",
           height: "100vh",
           minHeight: "100vh"
         }}
       >
-        <source src="/video2.mp4" type="video/mp4" />
+        <source src="/Faça seu evento conosco Base Vídeo BG.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -45,59 +45,18 @@ export default function HeroSection({
         }}
       />
 
-{/* Desktop Layout: Logo Left, Text Right */}
-      <div className="hidden md:flex container mx-auto px-6 py-20 relative z-10 items-center justify-center h-full max-w-6xl">
-        {/* Logo on the Left - INCREASED SIZE */}
-        <div className="flex-shrink-0 mr-12">
-          <img 
-            src="/VedeLogoWhite.png" 
-            alt="Vedê Bar Logo" 
-            className="w-80 h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] object-contain"
+{/* Logo Centered - Desktop and Mobile */}
+      <div className="container mx-auto px-6 py-20 relative z-10 flex items-center justify-center h-full">
+        {/* Logo Centered */}
+        <div>
+          <img
+            src="/VedeLogoWhite.png"
+            alt="Vedê Bar Logo"
+            className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] object-contain"
             style={{
               filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.8))"
             }}
           />
-        </div>
-        
-        {/* Text on the Right */}
-        <div className="flex-1 text-left">
-          <h1 className="text-3xl lg:text-5xl xl:text-6xl font-bold text-white tracking-tight leading-tight"
-            style={{ 
-              fontFamily: "Georgia, serif", 
-              textShadow: "0 8px 32px rgba(0,0,0,0.8)",
-              fontWeight: 900,
-              letterSpacing: "0.02em"
-            }}>
-            SEU BAR COM<br />ALMA BRASILEIRA
-          </h1>
-        </div>
-      </div>
-
-      {/* Mobile Layout: Logo Top Center, Text Below */}
-      <div className="md:hidden container mx-auto px-6 pt-24 pb-20 text-center relative z-10 flex flex-col items-center justify-start h-full">
-        {/* Logo at Top Center */}
-        <div className="mb-8">
-          <img 
-            src="/VedeLogoWhite.png" 
-            alt="Vedê Bar Logo" 
-            className="w-32 h-32 sm:w-40 sm:h-40 object-contain"
-            style={{
-              filter: "drop-shadow(0 8px 32px rgba(0,0,0,0.8))"
-            }}
-          />
-        </div>
-        
-        {/* Text Below Logo */}
-        <div className="flex-1 flex items-center">
-          <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-tight"
-            style={{ 
-              fontFamily: "Georgia, serif", 
-              textShadow: "0 8px 32px rgba(0,0,0,0.8)",
-              fontWeight: 900,
-              letterSpacing: "0.02em"
-            }}>
-            SEU BAR COM<br />ALMA BRASILEIRA
-          </h1>
         </div>
       </div>
     </section>

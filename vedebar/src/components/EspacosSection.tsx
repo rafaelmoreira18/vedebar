@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 
 interface EspacoItem {
   id: number;
@@ -35,99 +37,127 @@ const espacos: EspacoItem[] = [
   },
 ];
 
-// Mobile Carousel Component
-function MobileCarousel({ espacos }: { espacos: EspacoItem[] }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+// Mobile Instagram Embed (Photos Only)
+function MobileInstagramEmbed() {
+  useEffect(() => {
+    // Load Instagram embed script
+    const script = document.createElement('script');
+    script.src = '//www.instagram.com/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % espacos.length);
-  };
+    // Process embeds when script loads
+    script.onload = () => {
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    };
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + espacos.length) % espacos.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(index);
-  };
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
-    <div className="md:hidden max-w-md mx-auto">
-      {/* Dots indicator */}
-      <div className="flex justify-center mb-6 space-x-2">
-        {espacos.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex 
-                ? 'bg-white scale-125' 
-                : 'bg-white/40 hover:bg-white/60'
-            }`}
-          />
-        ))}
-      </div>
+    <div className="md:hidden w-full px-4 instagram-embed-container">
+      <style jsx global>{`
+        .instagram-embed-container .instagram-media {
+          max-height: 700px !important;
+          overflow: hidden !important;
+          padding: 0 !important;
+          margin: 0 auto !important;
+          border: none !important;
+          box-shadow: none !important;
+        }
 
-      {/* Carousel container */}
-      <div className="relative">
-        <div className="overflow-hidden rounded-2xl">
-          <div 
-            className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {espacos.map((espaco) => (
-              <div key={espaco.id} className="w-full flex-shrink-0">
-                <div className="relative aspect-[4/5] overflow-hidden shadow-lg">
-                  <img
-                    src={espaco.src}
-                    alt={espaco.alt}
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/30" />
-                  
-                  {/* Title */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <h3 className="text-white text-xl font-bold text-center px-4" style={{ fontFamily: "Georgia, serif" }}>
-                      {espaco.title}
-                    </h3>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        /* Hide ALL headers - multiple selectors to catch different structures */
+        .instagram-embed-container header,
+        .instagram-embed-container .Header,
+        .instagram-embed-container [class*="Header"],
+        .instagram-embed-container [class*="header"] {
+          display: none !important;
+        }
 
-        {/* Touch/swipe area for navigation */}
-        <div 
-          className="absolute inset-0 flex"
-          onTouchStart={(e) => {
-            const touchStart = e.touches[0].clientX;
-            const handleTouchEnd = (e: TouchEvent) => {
-              const touchEnd = e.changedTouches[0].clientX;
-              const diff = touchStart - touchEnd;
-              
-              if (Math.abs(diff) > 50) { // Minimum swipe distance
-                if (diff > 0) {
-                  nextSlide();
-                } else {
-                  prevSlide();
-                }
-              }
-              
-              document.removeEventListener('touchend', handleTouchEnd);
-            };
-            
-            document.addEventListener('touchend', handleTouchEnd);
+        /* Hide profile info */
+        .instagram-embed-container a[href*="instagram.com"]:not(img),
+        .instagram-embed-container [class*="Profile"],
+        .instagram-embed-container [class*="profile"] {
+          display: none !important;
+        }
+
+        /* Hide caption, likes, comments */
+        .instagram-embed-container .EmbeddedMediaCaption,
+        .instagram-embed-container .EmbeddedMediaCaptionPlaceholder,
+        .instagram-embed-container .Caption,
+        .instagram-embed-container .CaptionUsername,
+        .instagram-embed-container .CaptionComments,
+        .instagram-embed-container [class*="Caption"],
+        .instagram-embed-container [class*="caption"] {
+          display: none !important;
+        }
+
+        /* Hide footer and any links */
+        .instagram-embed-container footer,
+        .instagram-embed-container .Footer,
+        .instagram-embed-container [class*="Footer"],
+        .instagram-embed-container [class*="footer"] {
+          display: none !important;
+        }
+
+        /* Keep only the image carousel */
+        .instagram-embed-container img {
+          display: block !important;
+        }
+
+        /* Remove white borders */
+        .instagram-embed-container iframe {
+          border: none !important;
+        }
+
+        /* Disable all clicks and remove pointer cursor */
+        .instagram-embed-container * {
+          pointer-events: none !important;
+          cursor: default !important;
+        }
+
+        /* Re-enable pointer events only for carousel navigation */
+        .instagram-embed-container button,
+        .instagram-embed-container [role="button"] {
+          pointer-events: auto !important;
+        }
+      `}</style>
+
+      <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '0' }}>
+        <blockquote
+          className="instagram-media"
+          data-instgrm-captioned
+          data-instgrm-permalink="https://www.instagram.com/p/DBuU2RWydoj/?utm_source=ig_embed&amp;utm_campaign=loading"
+          data-instgrm-version="14"
+          style={{
+            background: 'transparent',
+            border: 'none',
+            borderRadius: '0',
+            margin: '0 auto',
+            maxWidth: '100%',
+            minWidth: '100%',
+            padding: 0,
+            width: '100%',
+            boxShadow: 'none'
           }}
         >
-          {/* Left tap area */}
-          <div className="w-1/2 h-full" onClick={prevSlide} />
-          {/* Right tap area */}
-          <div className="w-1/2 h-full" onClick={nextSlide} />
-        </div>
+        </blockquote>
+        {/* Overlay to hide top portion with header */}
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: '60px',
+          background: '#000',
+          zIndex: 10
+        }}></div>
       </div>
     </div>
   );
@@ -173,8 +203,8 @@ export default function EspacosSection() {
           ))}
         </div>
 
-        {/* Mobile: Carousel layout */}
-        <MobileCarousel espacos={espacos} />
+        {/* Mobile: Instagram Carousel (Photos Only) */}
+        <MobileInstagramEmbed />
       </div>
     </section>
   );

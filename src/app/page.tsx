@@ -65,18 +65,6 @@ export default function Page() {
       image: "/bebidas/03.jpg"
     },
     {
-      id: 4,
-      name: "Cabruca",
-      description: "Vodka infusionada nibs de cacau, leão do norte, mix de limões, suco de maracujá, xarope de caramelo, clara, finalizado com chocolate amargo. Redescobrindo as maravilhas nativas da mata atlântica, tão rica e poderosa que nos traz calma, alegria e conforta os corações. Leve, aromático, herbal",
-      image: "/bebidas/04.jpg"
-    },
-    {
-      id: 5,
-      name: "Canindé",
-      description: "Whiskey infusionado casca de jatobá, paratudo, xarope de baru, maracujá, mix de limões, curaçau blue e pasta de camu-camu. Cítrico, refrescante e frutado",
-      image: "/bebidas/05.jpg"
-    },
-    {
       id: 6,
       name: "King Fashioned",
       description: "Whiskey infusionado com café, xarope simples, angostura e grãos de café. Seco, aromático, encorpado",
@@ -112,11 +100,11 @@ export default function Page() {
     "/bebidas/01.jpg",
     "/bebidas/02.jpg",
     "/bebidas/03.jpg",
-    "/bebidas/04.jpg",
-    "/bebidas/05.jpg",
     "/bebidas/06.jpg",
     "/bebidas/07.jpg",
-    "/bebidas/08.jpg"
+    "/bebidas/08.jpg",
+    "/bebidas/09.jpg",
+    "/bebidas/11.jpg"
   ];
 
   const openModal = () => {
