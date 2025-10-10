@@ -431,13 +431,13 @@ export default function Page() {
          </div>
 
 
-        {/* Operating Hours Section */}
-        <OperatingHoursSection />
-
         {/* Google Maps Section */}
         <div id="maps">
           <MapsSection />
         </div>
+
+        {/* Operating Hours Section */}
+        <OperatingHoursSection />
 
         {/* Footer */}
         <div id="footer">
