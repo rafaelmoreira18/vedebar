@@ -13,7 +13,7 @@ export const drinks: Drink[] = [
     id: 1,
     src: "/bebidas/01.jpg",
     name: "Aquariano",
-    description: "Coquetel sofisticado com dupla de gins e toque floral de violeta",
+    description: "Gin Beg Tropical, Gin London Dry, Limão, Triple Sec, Xarope de violeta",
     ingredients: ["Gin Beg Tropical", "Gin London Dry", "Limão", "Triple Sec", "Xarope de violeta"],
     category: "Signature"
   },
@@ -21,7 +21,7 @@ export const drinks: Drink[] = [
     id: 2,
     src: "/bebidas/02.jpg",
     name: "Tropical 43",
-    description: "Coquetel tropical com licor espanhol, maracujá e espumante",
+    description: "Licor 43, Maracujá, Espumante Brut, Grenadine",
     ingredients: ["Licor 43", "Maracujá", "Espumante Brut", "Grenadine"],
     category: "Signature"
   },
@@ -29,7 +29,7 @@ export const drinks: Drink[] = [
     id: 3,
     src: "/bebidas/03.jpg",
     name: "Hanami",
-    description: "Coquetel japonês sofisticado com vodka premium e sabores orientais",
+    description: "Vodka Haku, Purê de Yuzu, Missô, Bitter de Laranja, Flor de Sabugueiro",
     ingredients: ["Vodka Haku", "Purê de Yuzu", "Missô", "Bitter de Laranja", "Flor de Sabugueiro"],
     category: "Signature"
   },
@@ -53,7 +53,7 @@ export const drinks: Drink[] = [
     id: 6,
     src: "/bebidas/06.jpg",
     name: "Batuque",
-    description: "Coquetel robusto com whisky bourbon, brandy e notas de pera",
+    description: "Whisky Bourbon, Brandy Jerez, Fireball, Purê de Pera, Limão, Mel",
     ingredients: ["Whisky Bourbon", "Brandy Jerez", "Fireball", "Purê de Pera", "Limão", "Mel"],
     category: "Signature"
   },
@@ -61,7 +61,7 @@ export const drinks: Drink[] = [
     id: 7,
     src: "/bebidas/07.jpg",
     name: "Iça Manauara",
-    description: "Coquetel amazônico com ingredientes regionais e espuma de açaí",
+    description: "Cachaça de Jambu, Maracujá, Amora, Elixir de Pixuri, Espuma de Açaí",
     ingredients: ["Cachaça de Jambu", "Maracujá", "Amora", "Elixir de Pixuri", "Espuma de Açaí"],
     category: "Signature"
   },
@@ -69,7 +69,7 @@ export const drinks: Drink[] = [
     id: 8,
     src: "/bebidas/08.jpg",
     name: "Jabuti",
-    description: "Gin refrescante com jabuticaba e notas cítricas",
+    description: "Gin, Jabuticaba, Limão Siciliano, Bitter Cítrico",
     ingredients: ["Gin", "Jabuticaba", "Limão Siciliano", "Bitter Cítrico"],
     category: "Signature"
   },
@@ -77,7 +77,7 @@ export const drinks: Drink[] = [
     id: 9,
     src: "/bebidas/09.jpg",
     name: "Renascentista",
-    description: "Coquetel sofisticado com bourbon e frutas vermelhas",
+    description: "Makers Mark, Limão, Amora, Licor de Cassis, Angostura",
     ingredients: ["Makers Mark", "Limão", "Amora", "Licor de Cassis", "Angostura"],
     category: "Signature"
   },
@@ -93,7 +93,7 @@ export const drinks: Drink[] = [
     id: 11,
     src: "/bebidas/11.jpg",
     name: "Jangadinha",
-    description: "Coquetel refrescante com rum especiado e notas cítricas",
+    description: "Spiced Rum, Gengibre, Hortelã, Limão, Bitter de laranja",
     ingredients: ["Spiced Rum", "Gengibre", "Hortelã", "Limão", "Bitter de laranja"],
     category: "Signature"
   },
