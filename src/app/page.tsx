@@ -48,50 +48,50 @@ export default function Page() {
   const drinks = [
     {
       id: 1,
-      name: "Iça Manauara",
-      description: "Cachaça de jambu, cachaça ouro infusionada pixuri, maracujá, amora, xarope de pixuri e finalizado com espuma de açaí com guaraná e pixuri ralado. Doce, frutado, refrescante",
+      name: "Aquariano",
+      description: "gin beg tropical . gin london dry . limão . triple sec . xarope de violeta",
       image: "/bebidas/01.jpg"
     },
     {
       id: 2,
-      name: "Tropicália",
-      description: "Gin brasileiro, maracujá, manjericão e toque de pimenta",
+      name: "Tropical 43",
+      description: "Licor 43 . Maracuja . Espumante Brut . Grenadine",
       image: "/bebidas/02.jpg"
     },
     {
       id: 3,
-      name: "Guigó",
-      description: "Cachaça envelhecida infusionada amburana, vermouth dry, suco de caju, lillet, xarope simples, triple sec. Defumado com casca de caju e amburan",
+      name: "Hanami",
+      description: "Vodka Haku . Purê de Yuzu . Missô . Bitter de Laranja . Flor de Sabugueiro",
       image: "/bebidas/03.jpg"
     },
     {
       id: 6,
-      name: "King Fashioned",
-      description: "Whiskey infusionado com café, xarope simples, angostura e grãos de café. Seco, aromático, encorpado",
+      name: "Batuque",
+      description: "Whisky Burbon . Brandy Jerez . Fireball . Purê de Pera . Limão . Mel",
       image: "/bebidas/06.jpg"
     },
     {
       id: 7,
-      name: "Ajuba",
-      description: "Drink especial da casa com ingredientes selecionados",
+      name: "Iça Manauara",
+      description: "Cachaça de Jambu . Maracujá . Amora . Elixir de Pixuri . Espuma de Açaí",
       image: "/bebidas/07.jpg"
     },
     {
       id: 8,
-      name: "Negroni Verão",
-      description: "GIN BEG, campari, vermute rosso, suco de laranja e água com gás. Refrescante e amargo",
+      name: "Jabuti",
+      description: "Gin . Jabuticaba . Limão Siciliano . Bitter Citrico",
       image: "/bebidas/08.jpg"
     },
     {
       id: 9,
-      name: "Penicilin",
-      description: "Scotch whiskey, gengibre, mix de limões e mel. Seco, aromático",
+      name: "Renascentista",
+      description: "Makers Mark . Limão . Amora . Licor de Cassis . Angostura",
       image: "/bebidas/09.jpg"
     },
     {
       id: 10,
-      name: "Pisco Sour",
-      description: "Pisco reservado, mix de limões, xarope simples, clara pasteurizada e angostura. Cítrico, refrescante",
+      name: "Jangadinha",
+      description: "Spiced Rum . Gengibre . Hortelã . Limão . Bitter de laranja",
       image: "/bebidas/11.jpg"
     }
   ];
