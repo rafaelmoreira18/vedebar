@@ -36,12 +36,9 @@ export default function DrinksSection({ drinks, onDrinkClick }: DrinksSectionPro
         <div className="container mx-auto px-6">
           <div className="text-center">
             <h2 className="text-4xl md:text-6xl text-white mb-4" style={{ fontFamily: "Playfair Display, serif", fontStyle: "italic", fontWeight: 400 }}>
-              Clássicos e Autorais
+              Nossa Carta
             </h2>
-            <div className="w-16 h-1 bg-white mx-auto mb-6" />
-            <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-light leading-relaxed" style={{ fontFamily: "Georgia, serif" }}>
-              Cada criação é uma obra de arte líquida, inspirada na riqueza cultural e natural do Brasil.
-            </p>
+            <div className="w-16 h-1 bg-white mx-auto" />
           </div>
         </div>
       </div>
