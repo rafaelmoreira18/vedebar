@@ -11,27 +11,27 @@ export interface Drink {
 export const drinks: Drink[] = [
   {
     id: 1,
-    src: "/images/bebida1.png",
-    name: "Caipirinha Tradicional",
-    description: "A clássica brasileira com cachaça artesanal, limão fresco e açúcar demerara",
-    ingredients: ["Cachaça artesanal", "Limão tahiti", "Açúcar demerara", "Gelo"],
-    category: "Clássicos"
+    src: "/bebidas/01.jpg",
+    name: "Aquariano",
+    description: "Coquetel sofisticado com dupla de gins e toque floral de violeta",
+    ingredients: ["Gin Beg Tropical", "Gin London Dry", "Limão", "Triple Sec", "Xarope de violeta"],
+    category: "Signature"
   },
   {
     id: 2,
-    src: "/images/bebida2.png",
-    name: "Tropical Sunset",
-    description: "Coquetel tropical com manga, maracujá e rum dourado",
-    ingredients: ["Rum dourado", "Polpa de manga", "Maracujá", "Água de coco", "Hortelã"],
-    category: "Tropicais"
+    src: "/bebidas/02.jpg",
+    name: "Tropical 43",
+    description: "Coquetel tropical com licor espanhol, maracujá e espumante",
+    ingredients: ["Licor 43", "Maracujá", "Espumante Brut", "Grenadine"],
+    category: "Signature"
   },
   {
     id: 3,
-    src: "/images/bebida3.png",
-    name: "Amazon Spirit",
-    description: "Drink inspirado na floresta com cupuaçu, cachaça e especiarias",
-    ingredients: ["Cachaça premium", "Cupuaçu", "Gengibre", "Capim santo", "Açaí"],
-    category: "Autorais"
+    src: "/bebidas/03.jpg",
+    name: "Hanami",
+    description: "Coquetel japonês sofisticado com vodka premium e sabores orientais",
+    ingredients: ["Vodka Haku", "Purê de Yuzu", "Missô", "Bitter de Laranja", "Flor de Sabugueiro"],
+    category: "Signature"
   },
   {
     id: 4,
@@ -51,35 +51,35 @@ export const drinks: Drink[] = [
   },
   {
     id: 6,
-    src: "/images/bebida6.png",
-    name: "Cerrado Gold",
-    description: "Premium com pequi, cachaça envelhecida e especiarias do cerrado",
-    ingredients: ["Cachaça envelhecida", "Pequi", "Baru", "Canela", "Cravo"],
-    category: "Premium"
+    src: "/bebidas/06.jpg",
+    name: "Batuque",
+    description: "Coquetel robusto com whisky bourbon, brandy e notas de pera",
+    ingredients: ["Whisky Bourbon", "Brandy Jerez", "Fireball", "Purê de Pera", "Limão", "Mel"],
+    category: "Signature"
   },
   {
     id: 7,
-    src: "/images/bebida7.png",
-    name: "Bahia Sunset",
-    description: "Inspirado no pôr do sol baiano com dendê, camarão e pimenta",
-    ingredients: ["Rum especial", "Dendê", "Pimenta malagueta", "Leite de coco", "Coentro"],
-    category: "Exóticos"
+    src: "/bebidas/07.jpg",
+    name: "Iça Manauara",
+    description: "Coquetel amazônico com ingredientes regionais e espuma de açaí",
+    ingredients: ["Cachaça de Jambu", "Maracujá", "Amora", "Elixir de Pixuri", "Espuma de Açaí"],
+    category: "Signature"
   },
   {
     id: 8,
-    src: "/images/bebida8.png",
-    name: "Pantanal Fresh",
-    description: "Refrescante com ervas do pantanal e gin artesanal",
-    ingredients: ["Gin artesanal", "Ervas pantaneiras", "Tônica", "Limão", "Pepino"],
-    category: "Gin"
+    src: "/bebidas/08.jpg",
+    name: "Jabuti",
+    description: "Gin refrescante com jabuticaba e notas cítricas",
+    ingredients: ["Gin", "Jabuticaba", "Limão Siciliano", "Bitter Cítrico"],
+    category: "Signature"
   },
   {
     id: 9,
-    src: "/images/bebida9.png",
-    name: "Verde Mata",
-    description: "Coquetel verde com ingredientes da mata atlântica",
-    ingredients: ["Cachaça", "Folhas nativas", "Lima da pérsia", "Xarope de cana", "Espuma"],
-    category: "Naturais"
+    src: "/bebidas/09.jpg",
+    name: "Renascentista",
+    description: "Coquetel sofisticado com bourbon e frutas vermelhas",
+    ingredients: ["Makers Mark", "Limão", "Amora", "Licor de Cassis", "Angostura"],
+    category: "Signature"
   },
   {
     id: 10,
@@ -91,11 +91,11 @@ export const drinks: Drink[] = [
   },
   {
     id: 11,
-    src: "/images/bebida11.png",
-    name: "Nordeste Soul",
-    description: "Alma nordestina com cajá, rum e temperos regionais",
-    ingredients: ["Rum aged", "Cajá", "Pimenta rosa", "Mel de abelha", "Água de flor"],
-    category: "Regionais"
+    src: "/bebidas/11.jpg",
+    name: "Jangadinha",
+    description: "Coquetel refrescante com rum especiado e notas cítricas",
+    ingredients: ["Spiced Rum", "Gengibre", "Hortelã", "Limão", "Bitter de laranja"],
+    category: "Signature"
   },
   {
     id: 12,
