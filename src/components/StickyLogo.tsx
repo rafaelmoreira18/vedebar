@@ -18,7 +18,8 @@ export default function StickyLogo({ stickyLogoRef, animationComplete }: StickyL
     >
       <h1 className="text-4xl md:text-5xl font-bold text-white transition-colors duration-300"
         style={{
-          fontFamily: "Georgia, serif",
+          fontFamily: "Playfair Display, serif",
+          fontStyle: "italic",
           textShadow: "0 2px 10px rgba(0,0,0,0.3)",
           letterSpacing: "0.05em"
         }}>

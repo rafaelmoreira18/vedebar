@@ -37,7 +37,7 @@ export default function HeroSection({
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/bg.jpeg')",
+          backgroundImage: "url('/espaços/bar1.JPG')",
           display: animationComplete && videoLoaded ? "none" : "block",
           filter: "brightness(0.4)",
           height: "100vh",

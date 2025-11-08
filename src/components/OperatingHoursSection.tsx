@@ -6,7 +6,7 @@ export default function OperatingHoursSection() {
   return (
     <section className="operating-hours-section py-32 backdrop-blur-sm animated-section" style={{ backgroundColor: '#000000' }}>
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-5xl md:text-7xl font-bold text-white mb-12" style={{ fontFamily: "Georgia, serif" }}>
+        <h2 className="text-5xl md:text-7xl font-bold text-white mb-12" style={{ fontFamily: "Playfair Display, serif", fontStyle: "italic", fontWeight: 400 }}>
           Horário de Funcionamento
         </h2>
         <div className="w-16 h-1 bg-white mx-auto mb-12" />

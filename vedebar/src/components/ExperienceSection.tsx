@@ -6,15 +6,18 @@ interface ExperienceSectionProps {
   reservationsVideoRef: React.RefObject<HTMLVideoElement | null>;
   animationComplete: boolean;
   reservationsVideoLoaded: boolean;
-  onReserveClick: () => void;
 }
 
 export default function ExperienceSection({
   reservationsVideoRef,
   animationComplete,
   reservationsVideoLoaded,
-  onReserveClick,
 }: ExperienceSectionProps) {
+  const handleWhatsAppClick = () => {
+    const phoneNumber = "5511976250998"; // Formato internacional: +55 11 97625-0998
+    const message = encodeURIComponent("Olá! Gostaria de reservar o Vedê Bar para um evento privado.");
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  };
   return (
     <section className="relative flex items-center justify-center min-h-screen w-full overflow-hidden">
       {/* Video Background */}
@@ -55,12 +58,12 @@ export default function ExperienceSection({
               textShadow: "0 8px 32px rgba(0,0,0,0.8)",
               fontWeight: 900
             }}>
-            VIVA A EXPERIÊNCIA VEDÊ NO SEU EVENTO PRIVADO
+           Leve a experiência Vedê para o seu evento
           </h1>
           
           {/* CTA Button */}
           <button
-            onClick={onReserveClick}
+            onClick={handleWhatsAppClick}
             className="text-white px-12 py-4 rounded-full text-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-2xl"
             style={{
               backgroundColor: 'var(--bar-green)',

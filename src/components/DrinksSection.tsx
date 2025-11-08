@@ -66,7 +66,7 @@ export default function DrinksSection({ drinks, onDrinkClick }: DrinksSectionPro
                 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-900/80 via-black/70 to-amber-800/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center items-center p-4 text-center">
-                  <h3 className="text-white text-lg md:text-xl font-bold mb-2 leading-tight" style={{ fontFamily: "Georgia, serif" }}>
+                  <h3 className="text-white text-lg md:text-xl font-bold mb-2 leading-tight" style={{ fontFamily: "Playfair Display, serif", fontStyle: "italic" }}>
                     {drink.name}
                   </h3>
                   <p className="text-white/90 text-xs md:text-sm leading-relaxed line-clamp-4 mb-3">
@@ -99,7 +99,7 @@ export default function DrinksSection({ drinks, onDrinkClick }: DrinksSectionPro
                 
                 {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-900/80 via-black/70 to-amber-800/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-center items-center p-4 text-center">
-                  <h3 className="text-white text-lg md:text-xl font-bold mb-2 leading-tight" style={{ fontFamily: "Georgia, serif" }}>
+                  <h3 className="text-white text-lg md:text-xl font-bold mb-2 leading-tight" style={{ fontFamily: "Playfair Display, serif", fontStyle: "italic" }}>
                     {drink.name}
                   </h3>
                   <p className="text-white/90 text-xs md:text-sm leading-relaxed line-clamp-4 mb-3">
@@ -122,7 +122,8 @@ export default function DrinksSection({ drinks, onDrinkClick }: DrinksSectionPro
                 className="px-8 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:opacity-80"
                 style={{
                   backgroundColor: '#000000',
-                  fontFamily: "Georgia, serif",
+                  fontFamily: "Playfair Display, serif",
+                  fontStyle: "italic",
                   border: '2px solid rgba(255, 255, 255, 0.3)'
                 }}
               >
@@ -139,7 +140,8 @@ export default function DrinksSection({ drinks, onDrinkClick }: DrinksSectionPro
                 className="px-8 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:opacity-80"
                 style={{
                   backgroundColor: '#000000',
-                  fontFamily: "Georgia, serif",
+                  fontFamily: "Playfair Display, serif",
+                  fontStyle: "italic",
                   border: '2px solid rgba(255, 255, 255, 0.3)'
                 }}
               >

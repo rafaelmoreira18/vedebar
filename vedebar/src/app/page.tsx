@@ -12,7 +12,6 @@ import OperatingHoursSection from "../components/OperatingHoursSection";
 import MapsSection from "../components/MapsSection";
 import Footer from "../components/Footer";
 import StickyLogo from "../components/StickyLogo";
-import ReservationModal from "../components/ReservationModal";
 import DrinkModal from "../components/DrinkModal";
 import NavigationOverlay from "../components/NavigationOverlay";
 
@@ -29,14 +28,10 @@ export default function Page() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const reservationsVideoRef = useRef<HTMLVideoElement>(null);
   const stickyLogoRef = useRef<HTMLDivElement>(null);
-  const modalRef = useRef<HTMLDivElement>(null);
-  const modalContentRef = useRef<HTMLDivElement>(null);
-  const imageScrollRef = useRef<HTMLDivElement>(null);
   const drinkModalRef = useRef<HTMLDivElement>(null);
   const drinkModalContentRef = useRef<HTMLDivElement>(null);
 
   const [animationComplete, setAnimationComplete] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [reservationsVideoLoaded, setReservationsVideoLoaded] = useState(false);
   const [animationVisible, setAnimationVisible] = useState(true); // Toggle for development
@@ -105,62 +100,6 @@ export default function Page() {
       image: "/bebidas/11.jpg"
     }
   ];
-
-  const modalImages = [
-    "/bebidas/01.jpg",
-    "/bebidas/02.jpg",
-    "/bebidas/03.jpg",
-    "/bebidas/04.jpg",
-    "/bebidas/05.jpg",
-    "/bebidas/06.jpg",
-    "/bebidas/07.jpg",
-    "/bebidas/08.jpg"
-  ];
-
-  const openModal = () => {
-    setIsModalOpen(true);
-    document.body.style.overflow = 'hidden';
-    
-    // Animate modal in
-    gsap.set(modalRef.current, { display: 'flex' });
-    gsap.fromTo(modalRef.current, 
-      { opacity: 0 },
-      { opacity: 1, duration: 0.3, ease: "power2.out" }
-    );
-    gsap.fromTo(modalContentRef.current,
-      { scale: 0.8, opacity: 0, y: 50 },
-      { scale: 1, opacity: 1, y: 0, duration: 0.5, ease: "power3.out", delay: 0.1 }
-    );
-
-    // Start image scroll animation
-    gsap.to(imageScrollRef.current, {
-      x: "-50%",
-      duration: 30,
-      ease: "none",
-      repeat: -1
-    });
-  };
-
-  const closeModal = () => {
-    gsap.to(modalContentRef.current, {
-      scale: 0.8,
-      opacity: 0,
-      y: 50,
-      duration: 0.3,
-      ease: "power3.in"
-    });
-    gsap.to(modalRef.current, {
-      opacity: 0,
-      duration: 0.3,
-      ease: "power2.in",
-      delay: 0.1,
-      onComplete: () => {
-        setIsModalOpen(false);
-        document.body.style.overflow = 'auto';
-        gsap.set(modalRef.current, { display: 'none' });
-      }
-    });
-  };
 
   const openDrinkModal = (drink: typeof drinks[0]) => {
     setSelectedDrink(drink);
@@ -379,19 +318,9 @@ export default function Page() {
       />
 
       {/* Sticky Logo */}
-      <StickyLogo 
+      <StickyLogo
         stickyLogoRef={stickyLogoRef}
         animationComplete={animationComplete}
-      />
-
-      {/* Reservation Modal */}
-      <ReservationModal 
-        modalRef={modalRef}
-        modalContentRef={modalContentRef}
-        imageScrollRef={imageScrollRef}
-        isModalOpen={isModalOpen}
-        onClose={closeModal}
-        modalImages={modalImages}
       />
 
       {/* Main Content */}
@@ -422,11 +351,10 @@ export default function Page() {
 
          {/* Experience Section */}
          <div id="experience">
-           <ExperienceSection 
+           <ExperienceSection
             reservationsVideoRef={reservationsVideoRef}
             animationComplete={animationComplete}
             reservationsVideoLoaded={reservationsVideoLoaded}
-            onReserveClick={openModal}
           />
          </div>
 
