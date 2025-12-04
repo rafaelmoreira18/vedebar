@@ -1,0 +1,105 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "max",
+                "constraint": 100
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Nome do drink (ex: Aquariano, Tropical 43)",
+        "name": "name",
+        "type": "string",
+        "title": "Nome da Bebida"
+      },
+      {
+        "rows": 3,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "max",
+                "constraint": 500
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Lista de ingredientes separados por ponto (ex: gin beg tropical . limão . triple sec)",
+        "name": "description",
+        "type": "text",
+        "title": "Descrição / Ingredientes"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Faça upload da foto da bebida (formato recomendado: quadrado, mínimo 800x800px)",
+        "name": "image",
+        "type": "image",
+        "title": "Imagem da Bebida"
+      },
+      {
+        "initialValue": 1,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 1
+              },
+              {
+                "flag": "max",
+                "constraint": 8
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "description": "Posição no cardápio (1-8). Cada bebida deve ter uma ordem única.",
+        "name": "order",
+        "type": "number",
+        "title": "Ordem de Exibição"
+      },
+      {
+        "initialValue": true,
+        "description": "Desmarque para ocultar temporariamente do cardápio",
+        "name": "active",
+        "type": "boolean",
+        "title": "Ativo no Cardápio"
+      }
+    ],
+    "name": "menuItem",
+    "type": "document",
+    "title": "Menu Item (Bebida)"
+  }
+]

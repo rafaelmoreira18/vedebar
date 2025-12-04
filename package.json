@@ -6,15 +6,24 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sanity:dev": "sanity dev",
+    "sanity:build": "sanity build",
+    "sanity:deploy": "sanity deploy"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "@sanity/image-url": "^2.0.2",
+    "@sanity/vision": "^3.66.0",
     "formik": "^2.4.6",
     "gsap": "^3.12.5",
     "next": "^15.3.3",
+    "next-sanity": "^9.8.24",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-is": "^19.2.1",
+    "sanity": "^3.66.0",
+    "styled-components": "^6.1.19",
     "yup": "^1.7.0"
   },
   "devDependencies": {
