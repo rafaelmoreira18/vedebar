@@ -23,20 +23,16 @@ export default function OperatingHoursSection() {
             
             <div className="space-y-3 text-white/90">
               <div className="flex justify-between items-center">
-                <span className="font-medium">Quarta e quinta</span>
-                <span>18h - 23h</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="font-medium">Sexta</span>
-                <span>18h - 01h</span>
+                <span className="font-medium">Quarta a sexta</span>
+                <span>18h - 02h</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="font-medium">Sábado</span>
-                <span>16h - 01h</span>
+                <span>15h - 02h</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="font-medium">Domingo</span>
-                <span>15h - 21h</span>
+                <span>12h - 20h</span>
               </div>
             </div>
           </div>

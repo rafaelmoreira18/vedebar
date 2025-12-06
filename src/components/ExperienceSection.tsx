@@ -15,7 +15,7 @@ export default function ExperienceSection({
 }: ExperienceSectionProps) {
   const handleWhatsAppClick = () => {
     const phoneNumber = "5511976250998"; // Formato internacional: +55 11 97625-0998
-    const message = encodeURIComponent("Olá! Gostaria de reservar o Vedê Bar para um evento privado.");
+    const message = encodeURIComponent("Olá! Gostaria de fazer uma reserva");
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
   return (
@@ -59,9 +59,9 @@ export default function ExperienceSection({
               fontWeight: 400,
               fontStyle: "italic"
             }}>
-            VIVA A EXPERIÊNCIA VEDÊ NO SEU EVENTO PRIVADO
+            VIVA A EXPERIÊNCIA VEDÊ
           </h1>
-          
+
           {/* CTA Button */}
           <button
             onClick={handleWhatsAppClick}
@@ -74,7 +74,7 @@ export default function ExperienceSection({
             onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'var(--bar-green-dark)')}
             onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'var(--bar-green)')}
           >
-            Reservar
+            Faça sua Reserva
           </button>
         </div>
       </div>
