@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
 
     // Revalidate by tag if provided
     if (tagToRevalidate) {
-      revalidateTag(tagToRevalidate)
+      revalidateTag(tagToRevalidate, { validateTagCache: true })
     }
 
     return NextResponse.json(
@@ -94,7 +94,7 @@ export async function GET(request: NextRequest) {
     revalidatePath(path)
 
     if (tag) {
-      revalidateTag(tag)
+      revalidateTag(tag, { validateTagCache: true })
     }
 
     return NextResponse.json(
