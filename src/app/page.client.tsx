@@ -123,9 +123,10 @@ export default function ClientPage({ initialDrinks }: ClientPageProps) {
 
   const handleAnimationComplete = () => {
     setAnimationComplete(true);
+    setAnimationVisible(false);
     gsap.to(mainContentRef.current, {
       opacity: 1,
-      duration: 2,
+      duration: 1.5,
       ease: "power2.out"
     });
 
@@ -250,7 +251,7 @@ export default function ClientPage({ initialDrinks }: ClientPageProps) {
         ref={mainContentRef}
         className="relative z-10 min-h-screen"
         style={{
-          display: animationComplete ? "block" : "none"
+          visibility: animationComplete ? "visible" : "hidden"
         }}
       >
         <HeroSection

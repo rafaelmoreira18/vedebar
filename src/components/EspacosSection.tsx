@@ -24,15 +24,21 @@ const espacos: EspacoItem[] = [
   },
   {
     id: 3,
-    src: "/espaços/bar4.jpg",
+    src: "/espaços/bar3.jpg",
     alt: "Espaço Vedê 3",
     title: "Espaço 3"
   },
   {
     id: 4,
-    src: "/espaços/bar5.jpg",
+    src: "/espaços/bar4.jpg",
     alt: "Espaço Vedê 4",
     title: "Espaço 4"
+  },
+  {
+    id: 5,
+    src: "/espaços/bar5.jpg",
+    alt: "Espaço Vedê 5",
+    title: "Espaço 5"
   },
 ];
 
