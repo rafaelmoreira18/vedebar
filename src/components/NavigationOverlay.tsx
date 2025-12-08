@@ -28,7 +28,7 @@ export default function NavigationOverlay({ isVisible }: NavigationOverlayProps)
   };
 
   if (!isVisible) {
-    return true;
+    return null;
   }
 
   return (
