@@ -112,11 +112,29 @@ export default function DrinksSection({ drinks, onDrinkClick }: DrinksSectionPro
         </div>
         
         
+        {/* Desktop button */}
+        <div className="hidden md:flex justify-center py-8" style={{ backgroundColor: '#000000' }}>
+          <a
+            href="https://drive.google.com/drive/folders/1Ro3d5yczZ1UJSt6LWN2MlC0LpIXqPGES"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:opacity-80"
+            style={{
+              backgroundColor: '#000000',
+              fontFamily: "Playfair Display, serif",
+              fontStyle: "italic",
+              border: '2px solid rgba(255, 255, 255, 0.3)'
+            }}
+          >
+            Cardápio Completo
+          </a>
+        </div>
+
         {/* Mobile buttons */}
         <div className="md:hidden">
           {/* Ver mais button - show when not all drinks are visible */}
           {!showAll && drinks.length > 3 && (
-            <div className="flex justify-center py-8" style={{ backgroundColor: '#000000' }}>
+            <div className="flex justify-center gap-4 py-8" style={{ backgroundColor: '#000000' }}>
               <button
                 onClick={() => setShowAll(true)}
                 className="px-8 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:opacity-80"
@@ -129,12 +147,26 @@ export default function DrinksSection({ drinks, onDrinkClick }: DrinksSectionPro
               >
                 Ver mais
               </button>
+              <a
+                href="https://drive.google.com/drive/folders/1Ro3d5yczZ1UJSt6LWN2MlC0LpIXqPGES"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:opacity-80"
+                style={{
+                  backgroundColor: '#000000',
+                  fontFamily: "Playfair Display, serif",
+                  fontStyle: "italic",
+                  border: '2px solid rgba(255, 255, 255, 0.3)'
+                }}
+              >
+                Cardápio Completo
+              </a>
             </div>
           )}
 
           {/* Mostrar menos button - show when all drinks are visible */}
           {showAll && (
-            <div className="flex justify-center py-8" style={{ backgroundColor: '#000000' }}>
+            <div className="flex justify-center gap-4 py-8" style={{ backgroundColor: '#000000' }}>
               <button
                 onClick={() => setShowAll(false)}
                 className="px-8 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:opacity-80"
@@ -147,6 +179,20 @@ export default function DrinksSection({ drinks, onDrinkClick }: DrinksSectionPro
               >
                 Mostrar menos
               </button>
+              <a
+                href="https://drive.google.com/drive/folders/1Ro3d5yczZ1UJSt6LWN2MlC0LpIXqPGES"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 text-white font-medium rounded-lg transition-all duration-300 hover:opacity-80"
+                style={{
+                  backgroundColor: '#000000',
+                  fontFamily: "Playfair Display, serif",
+                  fontStyle: "italic",
+                  border: '2px solid rgba(255, 255, 255, 0.3)'
+                }}
+              >
+                Cardápio Completo
+              </a>
             </div>
           )}
         </div>
